@@ -9,7 +9,7 @@ function run {
         echo -e "run() function failure: provide code to run"
     fi
     #eval "$1 2>/dev/null"
-	source "$1"
+	$1
     if [ $? -ne 0 ] ; then
         if [ $# -gt 1 ] ; then
             echo -e $2
